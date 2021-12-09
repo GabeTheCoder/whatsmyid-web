@@ -1,0 +1,98 @@
+
+.Verify {
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+.primary {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    opacity: 0.0;
+    transition: 0.3s opacity ease;
+}
+
+.primary.visible {
+    opacity: 1.0;
+}
+
+.secondary {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.0;
+    pointer-events: none;
+    transform: translateY(32px);
+    transition: 0.3s opacity ease, 0.4s transform ease;
+}
+
+.secondary.visible {
+    opacity: 1.0;
+    pointer-events: auto;
+}
+
+.intro {
+    margin: 8px 0px;
+}
+
+.intro p {
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.field {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(47, 47, 47, 1.0);
+    padding: 12px 0px;
+    border-bottom: 2px solid rgba(233, 160, 72, 0.12);
+    transition: 0.3s border-bottom;
+}
+
+.field:focus {
+    border-bottom: 2px solid #FC8162;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.action {
+    flex-grow: 1;
+    height: 48px;
+    border-radius: 12px;
+    font-weight: 600;
+    background-color: rgba(233, 160, 72, 0.12);
+    cursor: pointer;
+}
+
+.action.main {
+    color: rgb(255, 255, 255);
+    background-color: #FC8162;
+}
+
+.action.cancel {
+    margin-left: 8px;
+}
+
+.action.main {
+    margin-right: 8px;
+}
+
+.action.pending {
+    opacity: 0.7;
+    pointer-events: none;
+}
